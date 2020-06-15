@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background-color: white;
+}
+/* Style for the menu title */
+#menuTitle {
+    width: 100%;
+    text-align: center;
+    font-size: 1.75rem;  /* Setting 75% larger */
+}
+
+/* Style for the div container of food title+descriptions */
+.foodSection {
+    border: 2px solid black;
+    background-color: lightgray;
+    padding: 0;
+}
+
+/* Style for the food descriptions - lorem ... */
+section {
+    clear: right;
+    padding: 10px;
+}
+
+/* Style for the food titles */
+.foodTitle {
+    font-size: 1.25rem;  /* Setting to 25% larger */
+    border: 2px solid black;
+    text-align: center;
+    position: relative;
+    right: -2px;
+    top: -2px;
+    margin: auto;
+    float: right;
+    width: 130px;
+    height: 29px;
+}
+
+#chickenTitle { background-color: #ff9999; }
+
+#beefTitle {
+    background-color: rgb(201, 29, 29);
+    color: white;
+}
+
+#sushiTitle { background-color: rgb(247, 189, 89); }
+
+/* Mobile devices */
+@media (max-width: 767px) {
+    .sm-lay {
+        display: grid;
+        grid-gap: 10px;
+    }
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+    .lg-lay {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 991px) {
+    .md-lay {
+        display: grid;
+        grid-template-areas: "sec1 sec2"
+            				 "sec3 sec3";
+        grid-gap: 10px;
+    }
+
+    #ChickenDiv {
+        grid-area: sec1;
+    }
+
+    #BeefDiv {
+        grid-area: sec2;
+    }
+
+    #SushiDiv {
+        grid-area: sec3;
+    }
+}
